@@ -1,0 +1,84 @@
+@switch (type) {
+    @case ('elevated') {
+        <button matButton="elevated" [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        {{ label }}
+        </button>
+    }
+
+    @case ('outlined') {
+        <button matButton="outlined" [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        {{ label }}
+        </button>
+    }
+
+    @case ('filled') {
+        <button matButton="filled" [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        {{ label }}
+        </button>
+    }
+
+    @case ('tonal') {
+        <button matButton="tonal" [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        {{ label }}
+        </button>
+    }
+
+
+    @case ('icon') {
+        <button matIconButton  [color]="color" [disabled]="disabled" (click)="onClick()">
+            <mat-icon>{{ icon }}</mat-icon>
+        </button>
+    }
+
+    @case ('fab') {
+        <button matFab [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        @else {
+            {{ label }}
+        }
+        </button>
+    }
+
+    @case ('mini-fab') {
+        <button matMiniFab [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        @else {
+            {{ label }}
+        }
+        </button>
+    }
+
+    @case ('fab-extended') {
+        <button  matFab extended [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        {{ label }}
+        </button>
+    }
+
+    @default {
+        <button mat-button [color]="color" [disabled]="disabled" (click)="onClick()">
+        @if (icon) {
+            <mat-icon>{{ icon }}</mat-icon>
+        }
+        {{ label }}
+        </button>
+    }
+}

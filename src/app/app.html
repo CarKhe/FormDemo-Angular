@@ -1,0 +1,19 @@
+<mat-card class="form-card">
+  <h2>Formulario de Registro</h2>
+
+  <form [formGroup]="formulario" (ngSubmit)="guardar()">
+
+    <app-generic-input type="text" placeholder="Nombre" controlName="nombre" label="Nombre"/>
+
+    <app-generic-input type="text" placeholder="Correo" controlName="correo" label="Correo"/>
+
+    <app-generic-input type="text" placeholder="Telefono" controlName="telefono" label="Telefono"/>
+
+    <app-generic-select label="Rol" controlName="rol" [options]="roles" displayField="nombre" valueField="id"/>
+
+    <app-generic-button label="Guardar" color="warn" type="icon" icon="save"  />    
+
+    <app-generic-button label="Borrar" color="warn" type="fab-extended" icon="delete"  />
+
+  </form>
+</mat-card>
