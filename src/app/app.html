@@ -1,19 +1,14 @@
-<mat-card class="form-card">
-  <h2>Formulario de Registro</h2>
-
-  <form [formGroup]="formulario" (ngSubmit)="guardar()">
-
-    <app-generic-input type="text" placeholder="Nombre" controlName="nombre" label="Nombre"/>
-
-    <app-generic-input type="text" placeholder="Correo" controlName="correo" label="Correo"/>
-
-    <app-generic-input type="text" placeholder="Telefono" controlName="telefono" label="Telefono"/>
-
-    <app-generic-select label="Rol" controlName="rol" [options]="roles" displayField="nombre" valueField="id"/>
-
-    <app-generic-button label="Guardar" color="warn" type="icon" icon="save"  />    
-
-    <app-generic-button label="Borrar" color="warn" type="fab-extended" icon="delete"  />
-
-  </form>
-</mat-card>
+<form [formGroup]="formulario" (ngSubmit)="guardar()">
+  <app-generic-card title="Registro Usuarios" subtitle="Llena los campos">
+        <div card-content>
+          <app-generic-input type="text" placeholder="Nombre" controlName="nombre" label="Nombre"/>
+          <app-generic-input type="text" placeholder="Correo" controlName="correo" label="Correo"/>
+          <app-generic-input type="text" placeholder="Telefono" controlName="telefono" label="Telefono"/>
+          <app-generic-select label="Rol" controlName="rol" [options]="roles" displayField="nombre" valueField="id"/>
+        </div>
+        <div #cardBotones card-botones >
+          <app-generic-button label="Guardar" color="warn" type="fab-extended" icon="save"  />  
+          <app-generic-button label="Guardar" color="warn" type="fab-extended" icon="save"  />    
+        </div>
+  </app-generic-card>
+</form>
