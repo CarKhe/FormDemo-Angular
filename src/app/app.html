@@ -1,3 +1,8 @@
+<app-generic-loader [show]="cargando" text="Cargando usuarios..." />
+<app-modal-acciones/>
+<app-generic-button label="Cancelar" color="warn" type="fab-extended" icon="cancel" (click)="cancelar()"  />  
+<app-generic-button label="Guardar" color="warn" type="fab-extended" icon="save" (click)="guardar()"  /> 
+
 <form [formGroup]="formulario" (ngSubmit)="guardar()">
   <app-generic-card title="Registro Usuarios" subtitle="Llena los campos">
         <div card-content>
@@ -7,7 +12,7 @@
           <app-generic-select label="Rol" controlName="rol" [options]="roles" displayField="nombre" valueField="id"/>
         </div>
         <div #cardBotones card-botones >
-          <app-generic-button label="Guardar" color="warn" type="fab-extended" icon="save"  />  
+          <app-generic-button label="Guardar" color="warn" type="fab-extended" icon="save"/>  
           <app-generic-button label="Guardar" color="warn" type="fab-extended" icon="save"  />    
         </div>
   </app-generic-card>
