@@ -24,10 +24,11 @@ export class GenericButton {
     | 'fab-extended' = 'basic';
   @Input() icon?: string;
   @Input() disabled: boolean = false;
+  @Input() emmit: boolean = true;
 
   @Output() click = new EventEmitter<void>();
 
-  onClick() {
-    this.click.emit();
+  onClick(emmit:boolean) {
+    if(emmit) this.click.emit();
   }
 }

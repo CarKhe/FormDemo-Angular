@@ -9,6 +9,7 @@ import { GenericInput } from './shared/components/generic-input/generic-input';
 import { GenericButton } from './shared/components/generic-button/generic-button';
 import { GenericSelect } from "./shared/components/generic-select/generic-select";
 import { GenericCard } from "./shared/components/generic-card/generic-card";
+import { TablaUsuario } from "./pages/tabla-usuario/tabla-usuario";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { GenericCard } from "./shared/components/generic-card/generic-card";
     MatInputModule,
     MatButtonModule,
     MatCardModule, GenericInput, GenericButton, GenericSelect,
-    GenericCard
+    GenericCard,
+    TablaUsuario
 ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
