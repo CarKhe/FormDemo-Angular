@@ -1,31 +1,48 @@
+@use '@angular/material' as mat;
+
+.primary{
+  @include mat.fab-overrides((
+    container-color: var(--mat-sys-primary),
+    foreground-color: var( --mat-sys-on-primary),
+    
+  ));
+
+  @include mat.icon-button-overrides((
+    icon-color: var(--mat-sys-primary)
+    
+  ));
+
+  
+}
+.secondary{
+  @include mat.fab-overrides((
+    container-color: var(--mat-sys-secondary),
+    foreground-color: var( --mat-sys-on-primary),
+  ));
+
+
+}
+
+.info{
+  @include mat.fab-overrides((
+    container-color: var(--mat-sys-tertiary),
+    foreground-color: var( --mat-sys-on-primary),
+  ));
+}
+
+.warning{
+  @include mat.fab-overrides((
+    container-color: var(--mat-sys-error),
+    foreground-color: var( --mat-sys-on-primary),
+  ));
+}
+
+
 button {
   margin: 4px;
 }
 
-:host {
-  display: inline-block;
 
-  @media (max-width: 768px) {
-    button {
-      font-size: 0.8rem;
-      padding: 6px 10px;
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1200px) {
-    button {
-      font-size: 0.9rem;
-      padding: 8px 14px;
-    }
-  }
-
-  @media (min-width: 1201px) {
-    button {
-      font-size: 1rem;
-      padding: 10px 16px;
-    }
-  }
-}
 
 
 

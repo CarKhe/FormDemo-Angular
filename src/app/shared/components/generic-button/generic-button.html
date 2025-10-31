@@ -1,6 +1,6 @@
 @switch (type) {
     @case ('elevated') {
-        <button matButton="elevated" [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matButton="elevated" [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -9,7 +9,7 @@
     }
 
     @case ('outlined') {
-        <button matButton="outlined" [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matButton="outlined" [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -18,7 +18,7 @@
     }
 
     @case ('filled') {
-        <button matButton="filled" [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matButton="filled" [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -27,7 +27,7 @@
     }
 
     @case ('tonal') {
-        <button matButton="tonal" [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matButton="tonal" [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -37,13 +37,13 @@
 
 
     @case ('icon') {
-        <button matIconButton  [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matIconButton  [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
             <mat-icon>{{ icon }}</mat-icon>
         </button>
     }
 
     @case ('fab') {
-        <button matFab [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matFab [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -54,7 +54,7 @@
     }
 
     @case ('mini-fab') {
-        <button matMiniFab [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button matMiniFab [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -65,7 +65,7 @@
     }
 
     @case ('fab-extended') {
-        <button  matFab extended [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button  matFab extended [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }
@@ -74,7 +74,7 @@
     }
 
     @default {
-        <button mat-button [color]="color" [disabled]="disabled" (click)="onClick(emmit)">
+        <button mat-button [ngClass]="color" [disabled]="disabled" (click)="onClick(emmit)">
         @if (icon) {
             <mat-icon>{{ icon }}</mat-icon>
         }

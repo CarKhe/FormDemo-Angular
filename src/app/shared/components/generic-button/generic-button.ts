@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class GenericButton {
   @Input() label: string = '';
-  @Input() color: 'primary' | 'accent' | 'warn' | undefined;
+  @Input() color: 'primary' | 'secondary' | 'info' | 'warning' | undefined;
   @Input() type:
     | 'basic'
     | 'elevated'
